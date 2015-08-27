@@ -1,4 +1,4 @@
-<header>
+<!--<header>
         <nav>
             <% if user_signed_in? %>
                 <strong<%= link_to current_user.username, controller: 'users', action: 'show'  %></strong>
@@ -10,6 +10,55 @@
             <% end %>
         </nav>
 </header>
+-->
+ <head>
+    <title>Home of *サービスの名前</title>
+  </head>
 
+  <body>
+  <%= @t %>
+  <%= stylesheet_link_tag "user/home", :media => "all" %>
+    <div id="header">
+      
+      <div id="headerbar">
+        <div id="titlerogo">Slater</div>
+        <div id="headerbar_link">ＨＯＭＥ　<%= link_to 'Ｔｌ', '/tls/index' %></div>
+      </div>
+      
+      <div id="profile">    
+        <div id="profile_left">
+          <div id="profile_image"><%= image_tag("home/main_bgi01.jpg") %></div>
+       　  <div id="profile_username"><!--%= @user[:name] %--></div>
+          <div id="profile_info">
+            friend:<!--%= @user[:friendNum] % --><br>
+            friended:<!--%= @user[:friendedNum] %>--><br>
+            experience:10ex<br>
+          </div>
+          <div id="profile_edit"><%= link_to 'edit', edit_user_registration_path %></div>
+        </div>
+        
+        <div id="profile_link"><%= link_to 'logOut', destroy_user_session_path, method: :delete %></div>
+        <div id="profile_text"><!--%= @user[:introduceText] %>--></div>
+      </div>  
+    
+    </div>
 
-home
+    <div id="main">
+      <div id="selectbar">お気に入り　pickUp　足跡</div>
+      <div id="sidebar">
+        <ul>
+          <li>ひとこと</li>
+          <li>Anime</li>
+          <li>Movie</li>
+          <li>Comic</li>
+        </ul>
+      </div>
+      <div id="tlbar">
+        <!--% if params[:page_type] = 0 then %>
+          %= render @page_type1 %>
+        % end %> -->
+      </div>
+    </div>
+    <div id="footer">footer</div>
+  
+  </body>

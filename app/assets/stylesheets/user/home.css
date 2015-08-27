@@ -1,0 +1,146 @@
+*{
+    margin: 0 auto;
+}
+
+html{
+  height:100%;
+  width :100%;
+}
+
+body{
+  background-color: orange; 
+  height: 100%;
+  width : 100%;
+}
+
+#header{
+  background-image: url(../home/header/bg09.jpg);
+  width : 100%;
+  height: 50%;
+  overflow: hidden;
+}
+
+  #headerbar{
+    background-color: white;
+    font-size :130%;
+    padding   : 5px;
+    color : blue;
+    width : 100%;
+    height: 7%;
+  }
+
+    #titlerogo{
+      text-align: center;
+      width: 10%;
+      float: center;
+    }
+
+    #headerbar_link{
+      text-align: center;
+      margin-top: -20px;
+      width: 30%;
+      float: right;
+    }
+
+  #profile{
+    background-color: blue;
+    font-size :130%;
+    padding: 0.5%;
+    float: center;
+    width  : 80%;
+    height : 100%;
+  }
+
+  #profile_left{
+    background-color: white;
+    width : 20%;
+    height: 100%;
+    float: left;
+  }
+
+    #profile_image{
+      margin: 5%;
+      width : auto;
+      height: auto;
+      float : left;
+    }
+
+    #profile_username{
+      margin-top: 7%;
+      width : 60%;
+      height: 10%; 
+      float : left;
+    }
+
+    #profile_link{
+      background-color: yellow;
+      margin-right: -0.5%; 
+      margin-top  : 2%;
+      width : 13%;
+      height: 10%;
+      float : right;
+    }
+
+    #profile_info{
+      margin-left: 3%;
+      float : left;
+      width : 90%;
+      height: 20%; 
+    }
+
+    #profile_edit{
+      background-color: red;
+      padding: 5px;
+      width : 25%;
+      height: 7%;
+      float: right;
+    }
+
+    #profile_text{
+      background-color: white;
+      margin-top : 7%;
+      margin-left: 25%;
+      font-size: 125%;
+      padding: 1%;
+      width : 65%;
+      height: 50%; 
+    }
+
+#main{
+  background-image: url(../home/main_bgi01.jpg);
+  margin: 5px 0px;
+  height: 100%;
+}
+
+#selectbar{
+  background-color: white;
+  width : 100%;
+  height: 5%; 
+  margin-left : auto;
+  margin-right: auto;
+}
+
+#sidebar{
+  background-color: yellow;
+  color: red;
+  font-size: 120%;
+  height: 100%;
+  width : 10%;
+  float : left;
+}
+
+#tlbar{
+  width : 70%;
+  height: 100%;
+}
+
+#footer{
+  background-color: yellow;
+  height: 10%;
+}
+
+/*
+index  :データのリスト
+new    :データの作成
+show(?):データの詳細
+*/
