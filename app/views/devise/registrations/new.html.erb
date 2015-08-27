@@ -1,0 +1,27 @@
+<%= stylesheet_link_tag 'user/new', :media => "all"  %>
+
+<body>
+  <%= @t %>
+  <div id="header">header</div>
+  <div id="main">
+    <div id="form_head"><span class="rogo">Slatter</span>へようこそ</div>
+    <div id="form_area">
+      <div id='error_message'></div>
+      <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+        <ul>
+          <li>メールアドレス<%= f.email_field :email, autofocus: true %></li>
+          <li>
+            パスワード
+            <% if @minimum_password_length %>
+              <em>(<%= @minimum_password_length %> characters minimum)</em>
+            <% end %><br />
+          </li>
+          <li>確認パスワード<%= f.password_field :password_confirmation, autocomplete: "off" %></li>
+        </ul>
+      <div id='form_submit'><%= f.submit "Sign up" %></div> 
+      <% end %>
+    </div>
+  </div>
+</body>
+
+<!-- <%= devise_error_messages! %>   <%= render "devise/shared/links" %> -->

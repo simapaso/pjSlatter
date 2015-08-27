@@ -1,0 +1,39 @@
+
+#header{
+  background-color: blue;
+  width : 100%;
+  height: 5%; 
+}
+
+#main{
+  background-color: red;
+  margin : 5% auto;
+  padding: 1%;
+  width : 60%;
+  height: 70%;
+}
+
+#form_head{
+  margin: 0% auto 1% auto;
+  margin-bottom: 1%;
+  text-align: center;
+  font-size: 300%;
+  width : 80%;
+  height: 15%; 
+}
+
+.rogo{
+  color: orange;
+  font-size: 120%;
+  font-family:Comic Sans Ms;;
+}
+
+#form_area{
+  background-color: yellow;
+  margin : auto;
+  padding: 1%;
+  width  : 90%;
+  height : 75%;
+}
+
+
