@@ -3,10 +3,10 @@
 <body>
   <%= @t %>
   <div id="header">header</div>
+  <div id="error_message"><%= devise_error_messages! %></div>
   <div id="main">
     <div id="form_head"><span class="rogo">Slatter</span>へようこそ</div>
     <div id="form_area">
-      <div id='error_message'></div>
       <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
         <ul>
           <li>

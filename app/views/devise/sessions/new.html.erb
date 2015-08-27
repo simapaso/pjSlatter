@@ -1,8 +1,7 @@
   <%= stylesheet_link_tag "user/login", :media => "all" %>
 <body>
-<div id="login_error"><p class="login_error_p">ユーザーネームかパスワードが違います</p></div>
+<div id="login_error"><%= devise_error_messages! %></div>
   <div id="main">
-    <div>WelCome</div>
     <div id="rogo">
       Slatter
     </div>

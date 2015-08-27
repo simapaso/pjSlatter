@@ -260,4 +260,6 @@ Devise.setup do |config|
   # so you need to do it manually. For the users scope, it would be:
   # config.omniauth_path_prefix = '/my_engine/users/auth'
     config.omniauth :twitter, "Vw1kGXsQaxCgGFIHyHLPn2jQG", "QDuFYymR20mOYxjIzsItxaiWGYybh1kIlpoxhkynRTiujIZgbG"
+  # mail setting
+  config.mailer_sender = "simpaso3652@gmail.com"
 end

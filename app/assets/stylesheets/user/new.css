@@ -7,7 +7,7 @@
 
 #main{
   background-color: red;
-  margin : 5% auto;
+  margin : 1% auto;
   padding: 1%;
   width : 60%;
   height: 70%;
@@ -37,11 +37,11 @@
 }
 
 #error_message{
+  padding-top: 10px;
   margin-right: auto;
   margin-left : auto;
-  margin-bottom: -25px; 
   width : 70%;
-  height: 5%;
+  height: auto;
 }
 
 ul{

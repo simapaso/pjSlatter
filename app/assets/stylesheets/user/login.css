@@ -25,7 +25,8 @@ body{
   background-color: yellow;
   margin-right: auto;
   margin-left : auto;
-  text-align  : center;  
+  text-align  : center;
+  color: red;
   width : 65%;
   height: 5%;
 }
