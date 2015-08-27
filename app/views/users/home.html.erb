@@ -20,16 +20,16 @@
       <div id="profile">
         <div id="profile_left">
           <div id="profile_image"><%= image_tag("home/main_bgi01.jpg") %></div>
-       　  <div id="profile_username"><%= @user[:name] %></div>
+       　  <div id="profile_username"><%= @user[:username] %></div>
           <div id="profile_edit"><%= link_to 'edit', edit_user_registration_path %></div>
           <div id="profile_info">
-            フォロー：<!--%= @user[:friendNum] % --><br>
-            フォロワー：<!--%= @user[:friendedNum] %>--><br>
-            ツイート数：
+            フォロー：<%= @user[:followNum] %><br>
+            フォロワー：<%= @user[:followerNum] %><br>
+            ツイート数：<%= @user[:sumOfMyTweet] %>
           </div>
         </div>
         <div id="profile_link"><%= link_to 'logout', destroy_user_session_path, method: :delete %></div>
-        <div id="profile_text">テストテキスト<!--%= @user[:introduceText] %>--></div>
+        <div id="profile_text"><%= @user[:myText] %></div>
       </div>    
     </div>
 
