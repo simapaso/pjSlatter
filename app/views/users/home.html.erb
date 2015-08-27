@@ -26,25 +26,26 @@
       </div>
       
       <div id="profile">    
+        
         <div id="profile_left">
           <div id="profile_image"><%= image_tag("home/main_bgi01.jpg") %></div>
        　  <div id="profile_username"><!--%= @user[:name] %--></div>
-          <div id="profile_info">
-            friend:<!--%= @user[:friendNum] % --><br>
-            friended:<!--%= @user[:friendedNum] %>--><br>
-            experience:10ex<br>
-          </div>
           <div id="profile_edit"><%= link_to 'edit', edit_user_registration_path %></div>
+          <div id="profile_info">
+            フォロー：<!--%= @user[:friendNum] % --><br>
+            フォロワー：<!--%= @user[:friendedNum] %>--><br>
+            ツイート数：
+          </div>
         </div>
-        
-        <div id="profile_link"><%= link_to 'logOut', destroy_user_session_path, method: :delete %></div>
+
+        <div id="profile_link"><%= link_to 'logout', destroy_user_session_path, method: :delete %></div>
         <div id="profile_text"><!--%= @user[:introduceText] %>--></div>
       </div>  
     
     </div>
 
     <div id="main">
-      <div id="selectbar">お気に入り　pickUp　足跡</div>
+      <div id="selectbar">お気に入り　ピックアップ　足跡</div>
       <div id="sidebar">
         <ul>
           <li>ひとこと</li>
