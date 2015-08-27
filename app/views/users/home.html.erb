@@ -20,7 +20,7 @@
       <div id="profile">
         <div id="profile_left">
           <div id="profile_image"><%= image_tag("home/main_bgi01.jpg") %></div>
-       　  <div id="profile_username"><!--%= @user[:name] %-->name</div>
+       　  <div id="profile_username"><%= @user[:name] %></div>
           <div id="profile_edit"><%= link_to 'edit', edit_user_registration_path %></div>
           <div id="profile_info">
             フォロー：<!--%= @user[:friendNum] % --><br>
