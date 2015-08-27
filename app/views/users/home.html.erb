@@ -11,25 +11,16 @@
         </nav>
 </header>
 -->
- <head>
-    <title>Home of *サービスの名前</title>
-  </head>
-
-  <body>
-  <%= @t %>
   <%= stylesheet_link_tag "user/home", :media => "all" %>
     <div id="header">
-      
       <div id="headerbar">
         <div id="titlerogo">Slater</div>
         <div id="headerbar_link">ＨＯＭＥ　<%= link_to 'Ｔｌ', '/tls/index' %></div>
       </div>
-      
-      <div id="profile">    
-        
+      <div id="profile">
         <div id="profile_left">
           <div id="profile_image"><%= image_tag("home/main_bgi01.jpg") %></div>
-       　  <div id="profile_username"><!--%= @user[:name] %--></div>
+       　  <div id="profile_username"><!--%= @user[:name] %-->name</div>
           <div id="profile_edit"><%= link_to 'edit', edit_user_registration_path %></div>
           <div id="profile_info">
             フォロー：<!--%= @user[:friendNum] % --><br>
@@ -37,11 +28,9 @@
             ツイート数：
           </div>
         </div>
-
         <div id="profile_link"><%= link_to 'logout', destroy_user_session_path, method: :delete %></div>
-        <div id="profile_text"><!--%= @user[:introduceText] %>--></div>
-      </div>  
-    
+        <div id="profile_text">テストテキスト<!--%= @user[:introduceText] %>--></div>
+      </div>    
     </div>
 
     <div id="main">
@@ -62,4 +51,3 @@
     </div>
     <div id="footer">footer</div>
   
-  </body>

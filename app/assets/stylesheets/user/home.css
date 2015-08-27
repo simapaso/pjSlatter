@@ -86,6 +86,7 @@ body{
 
     #profile_edit{
       background-color: red;
+      margin-top: 5px;
       padding: 5px;
       width : 25%;
       height: 7%;
@@ -93,8 +94,8 @@ body{
     }
 
     #profile_info{
-      padding: 3px;
-      margin : 80px auto;
+      padding: 2px;
+      margin : 85px auto;
       width  : 90%;
       height : 50%;
       line-height: 45px;
@@ -145,4 +146,3 @@ body{
   background-color: yellow;
   height: 10%;
 }
-
