@@ -13,10 +13,7 @@
 -->
   <%= stylesheet_link_tag "user/home", :media => "all" %>
     <div id="header">
-      <div id="headerbar">
-        <div id="titlerogo">Slater</div>
-        <div id="headerbar_link">ＨＯＭＥ　<%= link_to 'Ｔｌ', '/tls/index' %></div>
-      </div>
+      <%= render 'shared/headerber' %>
       <div id="profile">
         <div id="profile_left">
           <div id="profile_image"><%= image_tag("home/main_bgi01.jpg") %></div>
@@ -34,7 +31,7 @@
     </div>
 
     <div id="main">
-      <div id="selectbar">お気に入り　ピックアップ　足跡</div>
+      <div id="selectbar">お気に入り(0)　ピックアップ(0)　足跡</div>
       <div id="sidebar">
         <ul>
           <li>ひとこと</li>
