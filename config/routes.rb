@@ -6,7 +6,6 @@ Rails.application.routes.draw do
   resources :tls
 
   post '/users/edit/profile' => 'users#edit_profile', as: 'profile_edit'
-  get 'users/show' => 'users#show'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

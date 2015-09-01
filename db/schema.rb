@@ -11,11 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150831070507) do
+ActiveRecord::Schema.define(version: 20150901085535) do
+
+  create_table "channel_twitters", force: :cascade do |t|
+    t.integer  "twitter_id"
+    t.integer  "channel_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "tls", force: :cascade do |t|
-    t.integer  "channel_id"
-    t.integer  "user"
     t.text     "text"
     t.integer  "sum_fav"
     t.integer  "sum_pick"
@@ -25,6 +30,8 @@ ActiveRecord::Schema.define(version: 20150831070507) do
     t.integer  "user_id_of_asiato"
     t.datetime "created_at",        null: false
     t.datetime "updated_at",        null: false
+    t.integer  "channel_id"
+    t.integer  "user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -55,7 +62,6 @@ ActiveRecord::Schema.define(version: 20150831070507) do
     t.integer  "followerNum",            default: 0,                               null: false
     t.text     "myText",                 default: "まずは「edit」を押して、プロフィールを変更してみよう。", null: false
     t.integer  "sumOfMyTweet",           default: 0,                               null: false
-    t.integer  "myTlId"
     t.integer  "myFavTlId"
     t.integer  "myAsiatoTlId"
     t.integer  "myPickUpTlId"

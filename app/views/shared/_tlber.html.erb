@@ -1,3 +1,10 @@
-<ul>
-  
-</ul>
+<% @tl.each do |tl| %>
+  <ul>
+    <li>
+      <div id="_tweet">
+  	    <div id="_top">画像　<%= @user[:username] %>　<%= link_to 'お気に入り' %>(<%= tl.sum_fav %>)　<%= link_to 'ピックアップ' %>(<%= tl.sum_pick %>)</div>
+        <div id="_main"><%= tl.text %></div>
+      </div>
+    </li>
+  </ul>
+<% end %>
