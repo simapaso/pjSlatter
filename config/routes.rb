@@ -1,6 +1,11 @@
 Rails.application.routes.draw do
-  devise_for :users, controllers: { :omniauth_callbacks => "omniauth_callbacks" }
+  devise_for :users, controllers: { 
+    :omniauth_callbacks => "omniauth_callbacks" 
+  }
   
+  resources :tls
+
+  post '/users/edit/profile' => 'users#edit_profile', as: 'profile_edit'
   get 'users/show' => 'users#show'
 
   # The priority is based upon order of creation: first created -> highest priority.

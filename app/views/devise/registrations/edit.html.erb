@@ -3,29 +3,35 @@
 <%= render 'shared/headerber'  %>
 
 <div id='main'>
+    <%= form_for :test, url: 'edit/profile', id: 'profile_form_for' do |f| %>
   <div id="edit_profile_rogo">プロフィール</div>
   <div id="header">
-      <div id="profile">
-        <div id="profile_left">
-          <div id="profile_image">画像</div>
-       　  <div id="profile_username"><%= @user[:username] %></div>
-          <div id="profile_edit">edit</div>
-          <div id="profile_info">
-            フォロー：<%= @user[:followNum] %><br>
-            フォロワー：<%= @user[:followerNum] %><br>
-            ツイート数：<%= @user[:sumOfMyTweet] %>
-          </div>
+    <div id="profile">
+      <div id="profile_left">
+        <div id="profile_image">画像</div>
+        <div id="profile_username">
+          Name:
+          <%= f.text_field name: 'username', value: @user[:username], id: 'profile_text_field' %></div>
+        <div id="profile_info">
+          フォロー：<%= @user[:followNum] %><br>
+          フォロワー：<%= @user[:followerNum] %><br>
+          ツイート数：<%= @user[:sumOfMyTweet] %>
         </div>
-        <div id="profile_link"><%= link_to '完了' %></div>
-        <div id="profile_text"><%= @user[:myText] %></div>
-      </div>    
+      </div>
+        <div id="profile_link"><%= f.submit '完了' %></div>
+        <div id="text_form_area">
+          <div id="mytext_rogo">Text:</div>
+          <div id="profile_text"><%= f.text_area naem: 'myText', cols: 40, rows: 10 %><%= @user[:myText] %></div>
+        </div>
+      <% end %> 
+    </div>
   </div>
   
   <div id='edit_login_info_rogo'>ログイン情報</div>
   <div id="update_form_area">
       <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
       <%= devise_error_messages! %>  
-      
+    
       <div class="update_form_part">
         <%= f.label :email %><br />
         <%= f.email_field :email, autofocus: true %>

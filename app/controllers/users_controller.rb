@@ -12,4 +12,12 @@ class UsersController < ApplicationController
 
   end
 
+  def edit_profile
+  	if user_signed_in?
+  	  redirect_to 'users/home'
+  	else
+  	  render text: 'test'
+  	end
+  end
+
 end

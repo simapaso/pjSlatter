@@ -31,7 +31,13 @@
     </div>
 
     <div id="main">
-      <div id="selectbar">お気に入り(0)　ピックアップ(0)　足跡</div>
+      <div id="selectbar">
+      　　<div id="selectber_link">
+          お気に入り(0)　ピックアップ(0)　足跡
+        </div>
+        <div id="tweet_button"><%= link_to "ツイートする", new_tl_path %><%=image_tag('tl/tweet.jpg') %>
+        </div>
+      </div>
       <div id="sidebar">
         <ul>
           <li>ひとこと</li>
@@ -47,4 +53,3 @@
       </div>
     </div>
     <div id="footer">footer</div>
-  

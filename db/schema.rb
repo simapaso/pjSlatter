@@ -11,7 +11,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150827062315) do
+ActiveRecord::Schema.define(version: 20150831070507) do
+
+  create_table "tls", force: :cascade do |t|
+    t.integer  "channel_id"
+    t.integer  "user"
+    t.text     "text"
+    t.integer  "sum_fav"
+    t.integer  "sum_pick"
+    t.integer  "sum_asiato"
+    t.integer  "user_id_of_fav"
+    t.integer  "user_id_of_pick"
+    t.integer  "user_id_of_asiato"
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "",                              null: false

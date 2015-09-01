@@ -1,0 +1,17 @@
+<%= stylesheet_link_tag 'tl/new' %>
+
+<%= render 'shared/headerber' %>
+<div id="main">
+  <div id="form_area">
+    <%= @tl[:id]  %>
+    <%= form_for @tl, html: {id: 'form_tweet'} do |f| %>
+  	  <div id="form_top">
+  	    画像<%= @user[:username]%>　お気に入り(0)　ピックアップ(0)
+      </div>
+      <div id="form_text">
+        <%= f.text_area :text, cols: 55, rows: 15 %>
+  	  </div>
+  	  <%= f.submit 'ついーと' %>
+    <% end %>
+  </div>
+</div>
